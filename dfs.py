@@ -34,6 +34,6 @@ def bfs(graph,source):
             if u not in visited:
                 Q.put(u)
                 visited.update({u})
-bfs(graph1,0)
+bfs(graph1,1)
 print("\n")
     
