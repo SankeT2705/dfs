@@ -1,13 +1,9 @@
 graph1 = {
-    'A' : ['B','S'],
-    'B' : ['A'],
-    'C' : ['D','E','F','S'],
-    'D' : ['C'],
-    'E' : ['C','H'],
-    'F' : ['C','G'],
-    'G' : ['F','S'],
-    'H' : ['E','G'],
-    'S' : ['A','C','G']
+    1:[2,3],
+    2:[1],
+    3:[1,4,5],
+    4:[3],
+    5:[3] 
 }
 print("The adjacency List representing the graph is:")
 print(graph1)
