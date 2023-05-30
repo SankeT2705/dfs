@@ -1,10 +1,13 @@
 from queue import Queue
 graph1 = {
-    1:[2,3],
-    2:[1],
-    3:[1,4,5],
-    4:[3],
-    5:[3] 
+    0:[1,2,3],
+    1:[0,4],
+    2:[0,3,5],
+    3:[0,2,7,6],
+    4:[1],
+    5:[2],
+    6:[3],
+    7:[3]
 }
 print("The adjacency List representing the graph is:")
 print(graph1)
@@ -16,7 +19,7 @@ def dfs(graph, node, visited):
             dfs(graph,k, visited)
     return visited
 
-visited = dfs(graph1,1, [])
+visited = dfs(graph1,0, [])
 print("DFS:")
 print(visited)
 print("\n")
@@ -35,6 +38,6 @@ def bfs(graph,source):
                 Q.put(u)
                 visited.update({u})
 print("BFS :")
-bfs(graph1,1)
+bfs(graph1,0)
 print("\n")
     
