@@ -1,3 +1,4 @@
+from queue import Queue
 graph1 = {
     1:[2,3],
     2:[1],
@@ -18,3 +19,21 @@ def dfs(graph, node, visited):
 visited = dfs(graph1,1, [])
 print("Ans :")
 print(visited)
+print("\n")
+
+def bfs(graph,source):
+    Q=Queue()
+    visited=set()
+    Q.put(source)
+    visited.update({0})
+
+    while not Q.empty():
+        vertex=Q.get()
+        print(vertex,end="--->")
+        for u in graph[vertex]:
+            if u not in visited:
+                Q.put(u)
+                visited.update({u})
+bfs(graph1,0)
+print("\n")
+    
