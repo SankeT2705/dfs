@@ -17,7 +17,7 @@ def dfs(graph, node, visited):
     return visited
 
 visited = dfs(graph1,1, [])
-print("Ans :")
+print("DFS:")
 print(visited)
 print("\n")
 
@@ -34,6 +34,7 @@ def bfs(graph,source):
             if u not in visited:
                 Q.put(u)
                 visited.update({u})
+print("BFS :")
 bfs(graph1,1)
 print("\n")
     
