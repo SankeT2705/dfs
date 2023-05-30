@@ -20,4 +20,5 @@ def dfs(graph, node, visited):
     return visited
 
 visited = dfs(graph1,'A', [])
+print("Ans :")
 print(visited)
