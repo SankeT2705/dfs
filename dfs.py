@@ -15,6 +15,6 @@ def dfs(graph, node, visited):
             dfs(graph,k, visited)
     return visited
 
-visited = dfs(graph1,'A', [])
+visited = dfs(graph1,1, [])
 print("Ans :")
 print(visited)
